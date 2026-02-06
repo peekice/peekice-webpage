@@ -20,7 +20,7 @@ body {
   padding: 0 10px;
   
   /* Responsive size: will shrink to fit small screens perfectly */
-  font-size: clamp(2rem, 25vw, 10rem); 
+  font-size: 10vw;
   
   background: linear-gradient(
     to right,
