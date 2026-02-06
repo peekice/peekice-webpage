@@ -29,7 +29,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
-  animation: rainbow-shift 8s linear infinite;
+  animation: rainbow-shift 20s linear infinite;
 }
 
 @keyframes rainbow-shift {
