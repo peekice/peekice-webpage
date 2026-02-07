@@ -9,31 +9,26 @@ body {
   background-color: #111;
   font-family: "Arial", sans-serif;
   
-  /* THIS STOPS SCROLLING */
-  overflow: hidden; 
-  position: fixed; /* Extra insurance against scrolling on mobile */
 }
 
 .rainbow-text {
   text-align: center;
   margin: 0;
   padding: 0 10px;
-  
-  /* Responsive size: will shrink to fit small screens perfectly */
   font-size: 10vw;
   
-  background: linear-gradient(
-    to right,
-    #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: rainbow-shift 20s linear infinite;
+  /* Pick one vibrant starting color */
+  color: #ef5350; 
+  
+  /* The Magic: Hue Rotation */
+  animation: color-cycle 20s linear infinite;
 }
 
-@keyframes rainbow-shift {
+@keyframes color-cycle {
+  from {
+    filter: hue-rotate(0deg);
+  }
   to {
-    background-position: 200% center;
+    filter: hue-rotate(360deg);
   }
 }
